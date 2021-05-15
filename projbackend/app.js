@@ -8,6 +8,7 @@ const cors = require("cors");
 //--------------------------My Routes-----------------------
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user.route");
+const categoryRoutes = require("./routes/category.route");
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use(cors());
 //Routes start
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
+app.use("/api", categoryRoutes);
 
 //Routes End
 
