@@ -10,6 +10,7 @@ const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user.route");
 const categoryRoutes = require("./routes/category.route");
 const productRoutes = require("./routes/product.route");
+const orderRoutes = require("./routes/order.route");
 
 const app = express();
 
@@ -36,6 +37,7 @@ app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);
+app.use("/api", orderRoutes);
 
 //Routes End
 
