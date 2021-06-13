@@ -5,14 +5,15 @@ var expressJwt = require("express-jwt");
 
 exports.signup = (req, res) => {
   const errors = validationResult(req);
+  console.log(errors);
   if (!errors.isEmpty()) {
     return res.status(422).json({
-      errormsg: errors.array()[0].msg,
-      errorparam: errors.array()[0].param,
+      error: errors.array()[0].msg,
     });
   }
-
   const user = new User(req.body); //creating a object of User tyoe
+  console.log(req.body);
+
   //return 2 things 1 is error another is user itself
   user.save((err, user) => {
     if (err) {

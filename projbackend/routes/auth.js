@@ -28,10 +28,4 @@ router.post(
 
 router.get("/signout", signout);
 
-//isSignedIn is using JWT for authentication of a user will place the token which we get while signin & put it in the headers
-
-router.get("/testroute", isSignedIn, (req, res) => {
-  res.json(req.auth);
-});
-
 module.exports = router;

@@ -5,5 +5,12 @@
 }
 
 body {
-  background: #343a40;
+  background: #212529;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
 }
